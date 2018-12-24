@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-5">
+       <h3>Contractors </h3>  
+       <ul class="list-group-items">
+        
+         <li *ngFor="let usr of contractor">
+            <b>Name:</b>  {{usr.name}} <b>Email:</b> {{usr.email}}  {{usr.id}}
+            <!-- <b><i *ngIf='usr.aproved == "pending"' (click)="verify(usr)" > |Yet To Approve|</i></b> 
+            <b> <i *ngIf='usr.aproved == "aproved"'>|Approved|</i></b>  
+            <b> <i *ngIf='usr.aproved == "pending"' (click)="disAproved(usr)">|Disapprove|</i></b>
+            <b> <i *ngIf='usr.aproved == "disaproved"' >|User Disapproved|</i></b>
+            <article *ngIf='usr.aproved == "pending"'>
+                <b><span>Select Reason of rejection</span></b>
+                <select (change)="selectChangeHandler($event)">
+                  <option> select Reason</option>
+                  <option value="100"> Make Professional Profile </option>
+                  <option value="1000"> Image is of Bad quality</option>
+                  <option value="2000"> Rates are Too High </option>
+                  <option value="5000"> Mobile Numbers are Erong</option>
+                  <option value="10000"> Description is too Short</option>
+                </select>
+              </article> -->
+         </li>
+       </ul>
+      </div>
+    </div>
+  </div>

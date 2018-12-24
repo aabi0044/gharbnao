@@ -1,0 +1,27 @@
+<div *ngIf='status == "pending"'>
+
+    <p>
+
+        Admin does not approved your Profile Yet ! 
+        wait for the approvel
+      </p>
+      <button (click)="logOut()"> logout</button>
+      <button routerLink="../profilemanagement"> Manage Profile</button> 
+
+</div>
+  <div *ngIf='status == "disaproved"'>
+
+      <p>
+
+        Your Request not aproved !
+        Update your profile and send again for aproval if you are interested!
+        </p>
+        {{reason}}
+
+        <button (click)="logOut()"> logout</button>
+        <button routerLink="../profilemanagement"> Manage Profile</button> 
+  
+
+  </div>
+
+

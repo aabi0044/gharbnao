@@ -1,0 +1,61 @@
+<ul *ngIf="user"  >
+  <li> <b>No of projects</b>{{no}} <br>
+ <b> Name:</b> {{user.name}} <br>
+ <b> CNIC:</b> {{user.cnic}} <br>
+ <b> Email:</b> {{user.email}} <br>
+ <b> Type:</b> {{user.type}} <br>
+ <b> Picture:</b> {{user.photo}} <br>
+ <b> Location:</b> {{user.area}} <br>
+ <b> Typical Job Cost :</b> {{user.startprice}} -{{user.endprice}} <br>
+  </li>
+</ul>
+<h3>Average Rating</h3>
+
+{{ avgRating }}
+
+
+<h3>Reviews</h3>
+<div *ngFor="let star of stars ">
+
+  {{ star.userId }} gave {{ star.movieId }} {{ star.value }} stars
+
+</div>
+
+
+<h3>Post your Review</h3>
+
+<fieldset class="rating">
+  <ng-container  *ngFor="let num of [5, 4, 3, 2, 1]">
+      <!-- full star -->
+      <input (click)="starHandler(num)" 
+            [id]="'star'+num"
+            [value]="num-0.5"
+            name="rating" 
+            type="radio" />
+
+      <label class="full" [for]="'star'+num"></label>
+
+      <!-- half star -->
+      <input (click)="starHandler(num-0.5)" 
+             [value]="num-0.5"
+             [id]="'halfstar'+num" 
+             name="rating" 
+             type="radio"  />
+
+      <label class="half" [for]="'halfstar'+num"></label>
+
+  </ng-container>
+</fieldset>
+<ul *ngFor="let i of img">
+  <li>
+   
+    <img [src]="i.image[0]" alt=""  > 
+    <br>
+    <b>Name Of Project:</b> {{i.name}} 
+    <br>
+  <b>Location</b>  {{i.area}}<br> <b>No of Pictures</b> {{i.image.length}}
+  </li>
+
+</ul>
+<li></li>
+

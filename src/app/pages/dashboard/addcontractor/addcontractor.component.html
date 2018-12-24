@@ -1,0 +1,111 @@
+<form class="modal-content" action="/action_page.php">
+  <div class="container">
+   
+    <h1>Register Yourself</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" [(ngModel)]="user.name" name="name" [ngModelOptions]="{standalone: true}"  required>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email"  [(ngModel)]="user.email" name="email" [ngModelOptions]="{standalone: true}"  required>
+  
+
+    <label for="name"><b>Phone Number</b></label>
+    <input type="number" placeholder="Enter Mobile Number" [(ngModel)]="user.phone" name="number"  [ngModelOptions]="{standalone: true}" required>
+
+    <label for="name"><b> Alternative Phone Number</b></label>
+    <input type="number" placeholder="Enter Mobile Number" [(ngModel)]="user.altnum" name="number"  [ngModelOptions]="{standalone: true}" required>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" [(ngModel)]="user.password"  [ngModelOptions]="{standalone: true}" name="psw" required>
+
+    <label for="psw"><b>Area</b></label>
+    <input type="text" placeholder="enter area" [(ngModel)]="location.name"  [ngModelOptions]="{standalone: true}" name="psw" required>
+    <label for="psw"><b>Upload Picture</b></label>
+    <input type="text" placeholder="enter Picture" [(ngModel)]="user.photo"  [ngModelOptions]="{standalone: true}" name="psw" required>
+    <label for="name"><b>Cnic</b></label>
+    <input type="number" placeholder="Enter Cnic" [(ngModel)]="user.cnic" name="number"  [ngModelOptions]="{standalone: true}" required>
+    <label for="name"><b>Enter Year Of Experience</b></label>
+    <input type="number" placeholder="Enter Year Of experience" [(ngModel)]="user.experience" name="number"  [ngModelOptions]="{standalone: true}" required>
+    <div><b><label>Enter 3 three Marla price</label></b>
+      
+        <label for="name"><b>Enter Starting Price</b></label>
+        <input type="number" placeholder="Enter Start price" [(ngModel)]="threemarla.sprice" name="number"  [ngModelOptions]="{standalone: true}" required>
+        <label for="name"><b>Enter End Price</b></label>
+        <input type="number" placeholder="Enter End Price" [(ngModel)]="threemarla.eprice" name="number"  [ngModelOptions]="{standalone: true}" required>
+    
+    </div>
+    <div><b>  <label>Enter 5 Five Marla price</label></b>
+      <br>
+          <label for="name"><b>Enter Starting Price</b></label>
+          <input type="number" placeholder="Enter Start price" [(ngModel)]="fivemarla.sprice" name="number"  [ngModelOptions]="{standalone: true}" required>
+          <label for="name"><b>Enter End Price</b></label>
+          <input type="number" placeholder="Enter End Price" [(ngModel)]="fivemarla.eprice" name="number"  [ngModelOptions]="{standalone: true}" required>
+      
+      </div>
+      <div><b><label>Enter 7 seven Marla price</label></b>
+          <br>
+            <label for="name"><b>Enter Starting Price</b></label>
+            <input type="number" placeholder="Enter Start price" [(ngModel)]="sevenmarla.sprice" name="number"  [ngModelOptions]="{standalone: true}" required>
+            <label for="name"><b>Enter End Price</b></label>
+            <input type="number" placeholder="Enter End Price" [(ngModel)]="sevenmarla.eprice" name="number"  [ngModelOptions]="{standalone: true}" required>
+        
+        </div>
+        <div><b><label>Enter 10 ten Marla price</label></b>
+            <br>
+              <label for="name"><b>Enter Starting Price</b></label>
+              <input type="number" placeholder="Enter Start price" [(ngModel)]="tenmarla.sprice" name="number"  [ngModelOptions]="{standalone: true}" required>
+              <label for="name"><b>Enter End Price</b></label>
+              <input type="number" placeholder="Enter End Price" [(ngModel)]="tenmarla.eprice" name="number"  [ngModelOptions]="{standalone: true}" required>
+          
+          </div>
+          <div><b>  <label>Enter 12 twelve Marla price</label></b>
+            <br>
+                <label for="name"><b>Enter Starting Price</b></label>
+                <input type="number" placeholder="Enter Start price" [(ngModel)]="twelvemarla.sprice" name="number"  [ngModelOptions]="{standalone: true}" required>
+                <label for="name"><b>Enter End Price</b></label>
+                <input type="number" placeholder="Enter End Price" [(ngModel)]="twelvemarla.eprice" name="number"  [ngModelOptions]="{standalone: true}" required>
+            
+            </div>
+            <div><b><label>Enter 15 fifteen Marla price</label></b>
+                <br>
+                  <label for="name"><b>Enter Starting Price</b></label>
+                  <input type="number" placeholder="Enter Start price" [(ngModel)]="fifteenmarla.sprice" name="number"  [ngModelOptions]="{standalone: true}" required>
+                  <label for="name"><b>Enter End Price</b></label>
+                  <input type="number" placeholder="Enter End Price" [(ngModel)]="fifteenmarla.eprice" name="number"  [ngModelOptions]="{standalone: true}" required>
+              
+              </div>
+              <div><b> <label>Enter 20 twenty  Marla price</label></b>
+                 <br>
+                    <label for="name"><b>Enter Starting Price</b></label>
+                    <input type="number" placeholder="Enter Start price" [(ngModel)]="twentymarla.sprice" name="number"  [ngModelOptions]="{standalone: true}" required>
+                    <label for="name"><b>Enter End Price</b></label>
+                    <input type="number" placeholder="Enter End price" [(ngModel)]="twentymarla.eprice" name="number"  [ngModelOptions]="{standalone: true}" required>
+                
+                </div>
+                <article>
+                    <b><span>Select Property type you are dealing with:</span></b>
+                    <select (change)="selectChangeHandler($event)">
+                      <option> select Type of property </option>
+                      <option value="commercial"> Commercial </option>
+                      <option value="residential"> Residential</option>
+
+                      </select>
+                      </article>
+    
+ <br> 
+ <!-- <b>Chose Type</b><br> -->
+ 
+ <!-- <input type="checkbox" value="a" (click)="clicked('Architect')"> Architect
+ <input type="checkbox" value="b" (click)="clicked('Contractor')">Contractor -->
+
+    <div class="clearfix">
+       
+    
+ 
+     
+
+      <button type="submit" class="signupbtn" (click)="signup()" >Sign Up</button>
+  
+    </div>
+  </div>
+</form>

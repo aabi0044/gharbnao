@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-5">
+       <h3>Disaproved Users</h3>  
+       <ul class="list-group-items">
+        
+         <li *ngFor="let usr of disaproved">
+            <b>Name:</b>   {{usr.name}} <b>Email:</b> {{usr.email}} <b>Status:</b> {{usr.aproved}} <b>Type: </b> {{usr.type}}
+
+ <b> Reason:</b>{{usr.reason}}
+         </li>
+       </ul>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,32 @@
+<form class="modal-content" action="/action_page.php">
+  <div class="container">
+   
+    <h1>Register Yourself</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" [(ngModel)]="user.name" name="name" [ngModelOptions]="{standalone: true}"  required>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email"  [(ngModel)]="user.email" name="email" [ngModelOptions]="{standalone: true}"  required>
+  
+
+    <label for="name"><b>Phone Number</b></label>
+    <input type="number" placeholder="Enter Mobile Number" [(ngModel)]="user.phone" name="number"  [ngModelOptions]="{standalone: true}" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" [(ngModel)]="user.password"  [ngModelOptions]="{standalone: true}" name="psw" required>
+
+   
+ <br>
+
+    <div class="clearfix">
+        <button  (click)="loginGoogle()">SignUp with google</button>
+
+ 
+        <button  (click)="loginFacebook()">SignUp with facebook</button>
+
+      <button type="submit" class="signupbtn" (click)="signup()" >Sign Up</button>
+      <button type="button" routerLink="/login" class="cancelbtn" ng-disabled="!(!!user.name && !!user.email && !!user.phone)">Already Have Account</button>
+    </div>
+  </div>
+</form>

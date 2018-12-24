@@ -1,0 +1,13 @@
+
+img {
+    size: 22%;
+    resize: horizontal;
+    height: 160px;
+}
+select{
+    margin-left: 150px;
+}
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    margin-left: 185px;
+}

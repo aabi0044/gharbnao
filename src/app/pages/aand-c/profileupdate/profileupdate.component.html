@@ -1,0 +1,29 @@
+<div class="container">
+<div class="row">
+  <div class="col-md-6">
+<form>
+<label> Cnic</label>
+<input type="number" [(ngModel)]="user.cnic" name="cnic" >
+<label> Altnum</label>
+<input type="number" [(ngModel)]="user.altnum" name="altnum" >
+<label> Start Price</label>
+<input type="number" [(ngModel)]="user.startprice" name="startprice" >
+<label> End Price</label>
+<input type="number" [(ngModel)]="user.endprice" name="endprice" >
+<label> Photo</label>
+<input type="text" [(ngModel)]="user.photo" name="photo" >
+<label> Experience</label>
+<input type="text" [(ngModel)]="user.experience" name="experience" >
+<label> Area</label>
+<input type="text" [(ngModel)]="region" name="area" >
+<button type="button " (click)="updateuser()" routerLink="../waiting" > Update</button>
+<button type="button " routerLink="../profilemanagement"  > U</button>
+
+
+</form>
+
+</div>
+</div>
+<!-- <router-outlet></router-outlet> -->
+
+</div>

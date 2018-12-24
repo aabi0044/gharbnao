@@ -1,0 +1,30 @@
+<p>
+  contractor works!
+</p>
+<button (click)="addProject()" >Add Project</button>
+<button (click)="addArea()" >Add New Area</button>
+<ul *ngIf="user"  >
+    <li> <b>No of projects</b> :{{no}} <br>
+   <b> Name:</b> {{user.name}} <br>
+   <b> CNIC:</b> {{user.cnic}} <br>
+   <b> Email:</b> {{user.email}} <br>
+   <b> Type:</b> {{user.type}} <br>
+   <b> Picture:</b> {{user.photo}} <br>
+   <b> Location:</b> {{user.area}} <br>
+   {{user}}
+   <b> Typical Job Cost :</b> {{user.startprice}} -{{user.endprice}} <br>
+    </li>
+  </ul>
+  <ul *ngFor="let i of projects">
+    <li>
+     
+      <img [src]="i.image[0]" alt="Nothing to show"  > 
+      <br>
+      <b>Name Of Project:</b> {{i.name}} 
+      <br>
+    <b>Location</b>  {{i.area}}<br> <b>No of Pictures</b> {{i.image.length}} 
+    </li>
+  
+  </ul>
+  <li></li>
+  

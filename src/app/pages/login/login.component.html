@@ -1,0 +1,25 @@
+<form class="modal-content" action="/action_page.php">
+  <div class="container">
+    <h1>Login</h1>
+    
+    <hr>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" [(ngModel)]="user.email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" [(ngModel)]="user.password" required>
+
+ 
+ 
+
+    <div class="clearfix">
+
+      <button type="submit" class="signupbtn" (click)="login()">login</button>
+      <button  (click)="loginGoogle()">Login with google</button>
+
+ 
+        <button  (click)="loginFacebook()">Login with facebook</button>
+      <button type="button" routerLink="/signup" class="cancelbtn">Don't Have Account</button>
+    </div>
+  </div>
+</form>

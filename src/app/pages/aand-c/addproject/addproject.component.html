@@ -1,0 +1,85 @@
+<form class="modal-content" action="/action_page.php">
+  <div class="container">
+   
+    <h1>Add New Project</h1>
+  
+    <hr>
+   
+    <label for="name"><b>Enter ProjectName</b></label>
+    <input type="text" placeholder="Enter Name" [(ngModel)]="project.name" name="name" [ngModelOptions]="{standalone: true}"  required>
+   
+    <label for="name"><b>Enter Project Price</b></label>
+    <input type="number" placeholder="Enter Mobile Number" [(ngModel)]="project.price" name="number"  [ngModelOptions]="{standalone: true}" required>
+
+   
+    <label for="psw"><b>Enter Location Of Project</b></label>
+    <input type="text" placeholder="enter area" [(ngModel)]="project.area"  [ngModelOptions]="{standalone: true}" name="psw" required>
+   
+    <label for="psw"><b>About</b></label>
+    <input type="text" placeholder="enter Picture" [(ngModel)]="project.about"  [ngModelOptions]="{standalone: true}" name="psw" required>
+   <br>
+   <label for="psw"><b>Details</b></label>
+   <input type="text" placeholder="enter Picture" [(ngModel)]="project.detail"  [ngModelOptions]="{standalone: true}" name="psw" required>
+  <br>
+  <input type="file" name="file" id="file" (change)="upload($event)" accept=".png,.jpg" value="Change Image" class="inputfile">
+  <label for="file">Select Image</label>
+
+
+
+    <article>
+      <b><span>Enter Year of Construction</span></b>
+      <select (change)="selectChangeHandler($event)">
+        <option> select Year</option>
+        <option value="1990"> 1990 </option>
+        <option value="1991"> 1991</option>
+        <option value="1992"> 1992</option>
+        <option value="1993"> 1993</option>
+        <option value="1994"> 1994</option>
+        <option value="1995"> 1995</option>
+        <option value="1996"> 1996</option>
+
+        <option value="1997"> 1997</option>
+        <option value="1998"> 1998</option>
+        <option value="1999"> 1999</option>
+        <option value="2000"> 2000</option>
+        <option value="2001"> 2001</option>
+        <option value="2002"> 2002</option>
+        <option value="2003"> 2003</option>
+        <option value="2004"> 2004</option>
+        <option value="2005"> 2005</option>
+
+        <option value="2006"> 2006</option>
+        <option value="2007"> 2007</option>
+        <option value="2008"> 2008</option>
+        <option value="2009"> 2009</option>
+        <option value="2010"> 2010</option>
+        <option value="2011"> 2011</option>
+        <option value="2012"> 2012</option>
+        <option value="2013"> 2013</option>
+        <option value="2014"> 2014</option>
+        <option value="2015"> 2015</option>
+        <option value="2016"> 2016</option>
+        <option value="2017"> 2017</option>
+        <option value="2018"> 2018</option>
+
+
+      </select>
+    </article> 
+   
+ <br> 
+ <!-- <b>Chose Type</b><br> -->
+ 
+ <!-- <input type="checkbox" value="a" (click)="clicked('Architect')"> Architect
+ <input type="checkbox" value="b" (click)="clicked('Contractor')">Contractor -->
+
+       
+    
+ 
+     
+
+      <button type="submit" class="signupbtn" (click)="addProject()" >Add project</button>
+  
+ 
+  </div>
+</form>
+

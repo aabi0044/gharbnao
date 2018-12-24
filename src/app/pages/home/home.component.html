@@ -1,0 +1,83 @@
+<div class="nav-wrapper">
+  <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text" role="tablist">
+      <li class="nav-item">
+          <a class="nav-link mb-sm-3 mb-md-0 active"  id="tabs-icons-text-1-tab" data-toggle="tab" href="#tabs-icons-text-1" role="tab" aria-controls="tabs-icons-text-1" aria-selected="true"><i class="ni ni-cloud-upload-96 mr-2"></i>Contractor</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-2-tab"  data-toggle="tab" href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2" aria-selected="false"><i class="ni ni-bell-55 mr-2"></i>Architect</a>
+      </li>
+     
+  </ul>
+</div>
+<div class="card shadow">
+  <div class="card-body">
+      <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
+           <select calss="slect" (change)="selectChangeHandler1($event)">
+             <option>
+               Select Type Of property
+             </option>
+          <option value="c">Commercial</option>
+          <option value="r">Residential</option>
+        </select>
+        <select calss="slect"(change)="selectChangeHandler2($event)">
+          <option> Select Area</option>
+          <option value="Bahria Phase 7" >Bahria Phase 7</option>
+          <option value="Sadar" >Sadar</option>
+          <option value="Taxila">Taxila</option>
+          <option value="PWD">PWD</option>
+          <option>F9 </option>
+          <option>G6</option>
+          <option>I9</option>
+          <option>Civic Center</option>
+        </select>
+        <select calss="slect" (change)="selectChangeHandler3($event)">
+         <option> select Marla</option>
+            <option value="3"> 3 Marla</option>
+            <option value="5">5 Marla</option>
+            <option value="7" >7 Marla</option>
+            <option value="10">10 Marla</option>
+            <option value="12">12 Marla</option>
+            <option value="15">15 Marla</option>
+            <option value="20">20 Marla</option>
+            
+          </select>
+            
+          <button type="button" class="btn btn-primary" (click)="getFilter()" >Search</button>
+          
+          </div>
+          <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
+              <select calss="slect" (change)="selectChangeHandler4($event)">
+                <option>Area</option>
+                <option value="Bahria Phase 7" >Bahria Phase 7</option>
+                <option value="Sadar" >Sadar</option>
+                <option value="Taxila">Taxila</option>
+                <option value="PWD">PWD</option>
+                <option>F9 </option>
+                <option>G6</option>
+                <option>I9</option>
+                <option>Civic Center</option>
+                </select>
+                <button type="button" class="btn btn-primary" (click)="filterArchitect()">Search</button>
+          </div>
+         
+      </div>
+  </div>
+</div>
+
+
+<ul *ngFor="let i of projects">
+  <li  (click)="profileView(i)" >
+    <img [src]="i.image[0]" alt="" > 
+    <br>
+    <b>Price:</b>{{i.price}} <b>Year of Creation</b> {{i.yoc}}
+  </li>
+
+</ul>
+<ul *ngFor="let a of filterres">
+  <li *ngIf="a.isPresente&&a.ispresentmarla">{{a.name}} {{a.type}}</li>
+  
+</ul>
+<ul  *ngIf="architect">
+  <li *ngFor="let item of architect" > {{item.name}}</li>
+</ul>
